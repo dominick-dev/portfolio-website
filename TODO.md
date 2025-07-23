@@ -11,3 +11,4 @@
 - [ ] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)
 - [ ] Get .dev domain name
 - [ ] Setup email forwarding
+- [ ] Fix email copied sonner not displaying in center of screen

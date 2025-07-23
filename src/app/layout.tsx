@@ -28,10 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Toaster position="top-center" richColors />
         <div className="min-h-screen px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-72 py-15">
           <div className="mx-auto w-full max-w-3xl">{children}</div>
         </div>
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );
