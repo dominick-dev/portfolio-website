@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
@@ -79,7 +78,8 @@
 }
 
 .dark {
-  --background: oklch(0.147 0.004 49.25);
+  /* --background: oklch(0.147 0.004 49.25); */
+  --background: oklch(0.2 0 0);
   --foreground: oklch(0.985 0.001 106.423);
   --card: oklch(0.216 0.006 56.043);
   --card-foreground: oklch(0.985 0.001 106.423);
@@ -119,4 +119,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
 }
