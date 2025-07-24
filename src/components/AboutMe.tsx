@@ -1,6 +1,6 @@
 function AboutMe() {
   return (
-    <div className="flex flex-col space-y-15 pt-10">
+    <div className="flex flex-col space-y-15 pt-15">
       {/* Bio Section */}
       <div className="space-y-4">
         <p>
