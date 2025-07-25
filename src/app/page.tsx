@@ -1,7 +1,8 @@
 import NavBar from "@/components/NavBar";
 import AboutMe from "@/components/AboutMe";
-import { Separator } from "@/components/ui/separator";
 import ProjectsGrid from "@/components/ProjectsGrid";
+import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 import type { Project } from "@/components/ProjectCard";
 
 const projects: Project[] = [
@@ -75,7 +76,8 @@ export default function Home() {
       <Separator />
       <AboutMe />
       <ProjectsGrid projects={projects} />
-      <Separator className="my-15" />
+      <Separator className="mt-15" />
+      <Footer />
     </div>
   );
 }
