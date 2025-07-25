@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SiGithub as GithubIcon } from "react-icons/si";
-import { Ellipsis } from "lucide-react";
 
 export interface Project {
   id: number;
