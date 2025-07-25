@@ -14,17 +14,21 @@ interface Props {
   project: Project;
   isExpanded?: boolean;
   onClick?: () => void;
+  innerRef?: React.RefObject<HTMLDivElement>;
 }
 
-function ProjectCard({ project, isExpanded, onClick }: Props) {
+function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
   return (
     <motion.div
       layout
+      ref={innerRef}
       transition={{
         layout: {
           type: "spring",
           stiffness: 250,
           damping: 25,
+          mass: 0.5,
+          bounce: 0.25,
         },
       }}
       onClick={onClick}
