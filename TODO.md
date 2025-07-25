@@ -3,8 +3,8 @@
 - [x] Set up project structure
 - [x] Design homepage layout
 - [x] Implement navigation bar
-- [ ] Write about me section
-- [ ] Add portfolio projects section
+- [x] Write about me section
+- [x] Add portfolio projects section
 - [ ] Add contact form
 - [ ] Test responsiveness
 - [ ] Deploy website

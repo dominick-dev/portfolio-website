@@ -19,6 +19,7 @@ import {
 import { toast } from "sonner";
 import { Avatar } from "@/components/ui/avatar";
 import Image from "next/image";
+import Link from "next/link";
 
 function saveToClipboard(email: string) {
   navigator.clipboard.writeText(email);
@@ -37,7 +38,7 @@ function NavBar() {
         <div className="relative w-10 h-10 rounded-full overflow-hidden">
           <Avatar className="w-full h-full">
             <Image
-              src="/me.JPG"
+              src="/me3.JPEG"
               alt="Dominick's avatar"
               width={40}
               height={40}
@@ -65,15 +66,22 @@ function NavBar() {
       {/* links */}
       <div className="flex items-center gap-1 h-5">
         {/* navbar links */}
-        <Button variant="ghost" size="sm">
-          About
-        </Button>
-        <Button variant="ghost" size="sm">
-          Projects
-        </Button>
-        <Button variant="ghost" size="sm">
-          Contact
-        </Button>
+        <Link href="#about">
+          <Button variant="ghost" size="sm">
+            About
+          </Button>
+        </Link>
+
+        <Link href="#projects">
+          <Button variant="ghost" size="sm">
+            Projects
+          </Button>
+        </Link>
+        <Link href="#contact">
+          <Button variant="ghost" size="sm">
+            Contact
+          </Button>
+        </Link>
         <Separator className="h-6" orientation="vertical" />
 
         {/* email hover card */}

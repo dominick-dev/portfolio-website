@@ -14,7 +14,7 @@ function ProjectsGrid({ projects }: Props) {
   return (
     <div>
       <div>
-        <h3 className="text-base font-medium text-muted-foreground mb-5 mt-15">
+        <h3 className="text-base font-medium text-muted-foreground mb-5 mt-20">
           Projects:
         </h3>
       </div>

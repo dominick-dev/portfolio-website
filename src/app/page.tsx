@@ -71,13 +71,25 @@ const projects: Project[] = [
 import "@/app/globals.css";
 export default function Home() {
   return (
-    <div>
-      <NavBar />
+    <div className="container mx-auto px-4">
+      <section id="home" className="scroll-mt-5">
+        <NavBar />
+      </section>
       <Separator />
-      <AboutMe />
-      <ProjectsGrid projects={projects} />
+
+      <section id="about">
+        <AboutMe />
+      </section>
+
+      <section id="projects" className="scroll-mt-15">
+        <ProjectsGrid projects={projects} />
+      </section>
+
       <Separator className="mt-15" />
-      <Footer />
+
+      <section id="contact" className="scroll-mb-25">
+        <Footer />
+      </section>
     </div>
   );
 }
