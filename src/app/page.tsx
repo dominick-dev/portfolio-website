@@ -74,10 +74,8 @@ export default function Home() {
       <NavBar />
       <Separator />
       <AboutMe />
+      <ProjectsGrid projects={projects} />
       <Separator className="my-15" />
-      <div>
-        <ProjectsGrid projects={projects} />
-      </div>
     </div>
   );
 }
