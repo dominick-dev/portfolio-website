@@ -25,7 +25,7 @@ function AboutMe() {
           </li>
           <li>Designing this portfolio website to showcase my projects 💼</li>
           <li>Revisiting Italian after a recent trip to Italy 🇮🇹</li>
-          <li>Leetcoding to to sharpen my DS&A skills 💻</li>
+          <li>Leetcoding to sharpen my DS&A skills 💻</li>
         </ul>
       </div>
     </div>

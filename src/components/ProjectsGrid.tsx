@@ -1,0 +1,55 @@
+"use client";
+
+import { useState } from "react";
+import ProjectCard, { Project } from "./ProjectCard";
+import { useRef, useEffect } from "react";
+
+interface Props {
+  projects: Project[];
+}
+
+function ProjectsGrid({ projects }: Props) {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  return (
+    <div className="grid grid-cols-2 gap-6 auto-rows-[200px] md:auto-rows-[300px] [grid-auto-flow:dense]">
+      {projects.map((project) => (
+        <ProjectWrapper
+          key={project.id}
+          project={project}
+          isExpanded={expandedId === project.id}
+          onClick={() =>
+            setExpandedId((prev) => (prev === project.id ? null : project.id))
+          }
+        />
+      ))}
+    </div>
+  );
+}
+
+export default ProjectsGrid;
+
+interface WrapperProps {
+  project: Project;
+  isExpanded: boolean;
+  onClick: () => void;
+}
+
+function ProjectWrapper({ project, isExpanded, onClick }: WrapperProps) {
+  const cardRef = useRef<HTMLDivElement>(null as unknown as HTMLDivElement);
+
+  useEffect(() => {
+    if (isExpanded && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [isExpanded]);
+
+  return (
+    <ProjectCard
+      project={project}
+      isExpanded={isExpanded}
+      onClick={onClick}
+      innerRef={cardRef}
+    />
+  );
+}
