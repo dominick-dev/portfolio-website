@@ -128,7 +128,7 @@ function NavBar() {
               {/* hardcoded email */}
               <DropdownMenuItem
                 disabled
-                className="!bg-stone-700 text-muted-foreground px-3 py-1 text-xs w-full rounded-none"
+                className="!bg-blue-900 px-3 py-2 text-xs w-full rounded-none pl-5"
               >
                 devindm101@gmail.com
               </DropdownMenuItem>
