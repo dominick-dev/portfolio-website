@@ -20,6 +20,7 @@ import { toast } from "sonner";
 import { Avatar } from "@/components/ui/avatar";
 import Image from "next/image";
 import Link from "next/link";
+import { FileUser } from "lucide-react";
 
 function saveToClipboard(email: string) {
   navigator.clipboard.writeText(email);
@@ -79,12 +80,33 @@ function NavBar() {
             Projects
           </Button>
         </Link>
-        <Link href="#contact">
-          <Button variant="ghost" size="sm">
-            Contact
-          </Button>
-        </Link>
+
         <Separator className="h-6" orientation="vertical" />
+
+        {/* resume hover card */}
+        <HoverCard openDelay={200}>
+          <HoverCardTrigger asChild>
+            <a
+              href="/Resume_2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition"
+              aria-label="View Resume"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="size-8 relative group"
+              >
+                <FileUser />
+                <span className="sr-only">View Resume</span>
+              </Button>
+            </a>
+          </HoverCardTrigger>
+          <HoverCardContent className="w-auto px-3 py-1 text-sm">
+            <p className="text-center">View my resume</p>
+          </HoverCardContent>
+        </HoverCard>
 
         {/* email hover card */}
         <DropdownMenu>
@@ -94,7 +116,7 @@ function NavBar() {
               size="icon"
               className="size-8 relative group"
             >
-              <HoverCard openDelay={100}>
+              <HoverCard openDelay={200}>
                 <HoverCardTrigger asChild>
                   <span className="absolute inset-0" />
                 </HoverCardTrigger>

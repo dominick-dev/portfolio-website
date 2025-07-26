@@ -87,9 +87,7 @@ export default function Home() {
 
       <Separator className="mt-15" />
 
-      <section id="contact" className="scroll-mb-25">
-        <Footer />
-      </section>
+      <Footer />
     </div>
   );
 }
