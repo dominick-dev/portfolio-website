@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 
 function Footer() {
   return (
-    <footer className="border-t pt-8 pb-16 text-sm text-muted-foreground">
+    <footer className="border-t pt-8 pb-30 text-sm text-muted-foreground">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-y-10 text-center md:text-left">
         {/* socials (upper-left), copyright (lower-left) */}
         <div className="flex flex-col items-center md:items-start gap-10">
@@ -88,21 +88,22 @@ function Footer() {
         {/* toggle light/dark mode (upper-right), made w/ message (lower-right) */}
         <div className="flex flex-col items-end gap-6 text-right">
           <div className="flex gap-4">
-            <HoverCard openDelay={100}>
+            <HoverCard openDelay={200}>
               <HoverCardTrigger asChild>
                 <a
                   href="/Resume_2025.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition"
+                  aria-label="View Resume"
                 >
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="size-8 relative group"
+                    className="hover:bg-muted/60 transition"
                   >
-                    <span className="absolute inset-0" />
-                    <FileUser className="h-5 w-5" />
+                    <FileUser className="h-[1.2rem] w-[1.2rem]" />
+                    <span className="sr-only">View Resume</span>
                   </Button>
                 </a>
               </HoverCardTrigger>
@@ -111,7 +112,16 @@ function Footer() {
               </HoverCardContent>
             </HoverCard>
 
-            <ThemeToggle />
+            <HoverCard openDelay={200}>
+              <HoverCardTrigger asChild>
+                <div>
+                  <ThemeToggle />
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-auto px-3 py-1 text-sm">
+                <p className="text-center">Toggle theme</p>
+              </HoverCardContent>
+            </HoverCard>
           </div>
           <span>Fatto con ❤️ e ☕️ a Washington DC</span>
         </div>
