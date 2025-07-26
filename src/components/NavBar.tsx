@@ -70,13 +70,13 @@ function NavBar() {
       <div className="flex items-center gap-1 h-5">
         {/* navbar links */}
         <Link href="#about">
-          <Button variant="ghost" size="sm">
+          <Button variant="ghost" size="sm" className="rounded-xl">
             About
           </Button>
         </Link>
 
         <Link href="#projects">
-          <Button variant="ghost" size="sm">
+          <Button variant="ghost" size="sm" className="rounded-xl">
             Projects
           </Button>
         </Link>
@@ -96,7 +96,7 @@ function NavBar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="size-8 relative group"
+                className="size-8 relative group rounded-lg"
               >
                 <FileUser />
                 <span className="sr-only">View Resume</span>
@@ -114,7 +114,7 @@ function NavBar() {
             <Button
               variant="ghost"
               size="icon"
-              className="size-8 relative group"
+              className="size-8 relative group rounded-lg"
             >
               <HoverCard openDelay={200}>
                 <HoverCardTrigger asChild>
@@ -132,7 +132,7 @@ function NavBar() {
           <DropdownMenuContent align="end" className="w-55 p-0">
             <DropdownMenuGroup>
               {/* send email */}
-              <DropdownMenuItem>
+              <DropdownMenuItem className="rounded-lg">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -146,11 +146,11 @@ function NavBar() {
                 </Button>
               </DropdownMenuItem>
               {/* copy email */}
-              <DropdownMenuItem>
+              <DropdownMenuItem className="rounded-lg">
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="w-full justify-start text-left text-sm"
+                  className="justify-start text-left text-sm"
                   onClick={() => saveToClipboard("devindm101@gmail.com")}
                 >
                   Copy email

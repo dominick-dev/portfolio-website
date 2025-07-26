@@ -14,7 +14,7 @@ function AboutMe() {
       </div>
 
       {/* Now Section */}
-      <div className="bg-muted/20 p-4 rounded-md">
+      <div className="bg-muted/20 p-4 rounded-xl">
         <h3 className="text-base font-medium text-muted-foreground mb-2">
           Right now, I’m focused on:
         </h3>

@@ -100,7 +100,7 @@ function Footer() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="hover:bg-muted/60 transition"
+                    className="hover:bg-muted/60 transition rounded-lg"
                   >
                     <FileUser className="h-[1.2rem] w-[1.2rem]" />
                     <span className="sr-only">View Resume</span>

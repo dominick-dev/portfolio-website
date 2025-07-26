@@ -132,7 +132,7 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
               >
                 <Button
                   size="sm"
-                  className="text-sm hover:ring-1 hover:shadow-md transition-transform hover:scale-[1.03]"
+                  className="text-sm hover:ring-1 hover:shadow-md transition-transform hover:scale-[1.03] rounded-xl"
                 >
                   <GithubIcon className="w-4 h-4" />
                   GitHub
