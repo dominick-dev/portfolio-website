@@ -5,10 +5,17 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { SlashIcon, Mail } from "lucide-react";
+import { SlashIcon, Mail, User } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import { FileUser } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { Button } from "@/components/ui/button";
 
 function Footer() {
   return (
@@ -81,6 +88,29 @@ function Footer() {
         {/* toggle light/dark mode (upper-right), made w/ message (lower-right) */}
         <div className="flex flex-col items-end gap-6 text-right">
           <div className="flex gap-4">
+            <HoverCard openDelay={100}>
+              <HoverCardTrigger asChild>
+                <a
+                  href="/Resume_2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition"
+                >
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="size-8 relative group"
+                  >
+                    <span className="absolute inset-0" />
+                    <FileUser className="h-5 w-5" />
+                  </Button>
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-auto px-3 py-1 text-sm">
+                <p className="text-center">View my resume</p>
+              </HoverCardContent>
+            </HoverCard>
+
             <ThemeToggle />
           </div>
           <span>Fatto con ❤️ e ☕️ a Washington DC</span>
