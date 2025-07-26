@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { SlashIcon, Mail, User } from "lucide-react";
+import { SlashIcon, Mail } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";

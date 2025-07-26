@@ -5,10 +5,10 @@
 - [x] Implement navigation bar
 - [x] Write about me section
 - [x] Add portfolio projects section
-- [ ] Add contact form
-- [ ] Incorporate resume
+- [x] Incorporate resume
 - [ ] Test responsiveness
 - [ ] Deploy website
+- [ ] Write README
 - [ ] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)
 - [ ] Get .dev domain name
 - [ ] Setup email forwarding, update email on site
