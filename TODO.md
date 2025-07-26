@@ -3,11 +3,12 @@
 - [x] Set up project structure
 - [x] Design homepage layout
 - [x] Implement navigation bar
-- [ ] Write about me section
-- [ ] Add portfolio projects section
-- [ ] Add contact form
+- [x] Write about me section
+- [x] Add portfolio projects section
+- [x] Incorporate resume
 - [ ] Test responsiveness
 - [ ] Deploy website
+- [ ] Write README
 - [ ] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)
 - [ ] Get .dev domain name
 - [ ] Setup email forwarding, update email on site

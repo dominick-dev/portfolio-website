@@ -1,7 +1,8 @@
 import NavBar from "@/components/NavBar";
 import AboutMe from "@/components/AboutMe";
-import { Separator } from "@/components/ui/separator";
 import ProjectsGrid from "@/components/ProjectsGrid";
+import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 import type { Project } from "@/components/ProjectCard";
 
 const projects: Project[] = [
@@ -70,14 +71,23 @@ const projects: Project[] = [
 import "@/app/globals.css";
 export default function Home() {
   return (
-    <div>
-      <NavBar />
+    <div className="container mx-auto px-4">
+      <section id="home" className="scroll-mt-5">
+        <NavBar />
+      </section>
       <Separator />
-      <AboutMe />
-      <Separator className="my-15" />
-      <div>
+
+      <section id="about">
+        <AboutMe />
+      </section>
+
+      <section id="projects" className="scroll-mt-15">
         <ProjectsGrid projects={projects} />
-      </div>
+      </section>
+
+      <Separator className="mt-15" />
+
+      <Footer />
     </div>
   );
 }

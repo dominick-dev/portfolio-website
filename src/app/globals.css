@@ -153,3 +153,7 @@
   animation: wave 1.5s infinite;
   transform-origin: 70% 70%;
 }
+
+html {
+  scroll-behavior: smooth;
+}

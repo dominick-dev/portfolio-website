@@ -12,17 +12,24 @@ function ProjectsGrid({ projects }: Props) {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-2 gap-6 auto-rows-[200px] md:auto-rows-[300px] [grid-auto-flow:dense]">
-      {projects.map((project) => (
-        <ProjectWrapper
-          key={project.id}
-          project={project}
-          isExpanded={expandedId === project.id}
-          onClick={() =>
-            setExpandedId((prev) => (prev === project.id ? null : project.id))
-          }
-        />
-      ))}
+    <div>
+      <div>
+        <h3 className="text-base font-medium text-muted-foreground mb-5 mt-20">
+          Projects:
+        </h3>
+      </div>
+      <div className="grid grid-cols-2 gap-6 auto-rows-[200px] md:auto-rows-[300px] [grid-auto-flow:dense]">
+        {projects.map((project) => (
+          <ProjectWrapper
+            key={project.id}
+            project={project}
+            isExpanded={expandedId === project.id}
+            onClick={() =>
+              setExpandedId((prev) => (prev === project.id ? null : project.id))
+            }
+          />
+        ))}
+      </div>
     </div>
   );
 }
