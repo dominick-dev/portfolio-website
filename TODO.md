@@ -6,6 +6,7 @@
 - [x] Write about me section
 - [x] Add portfolio projects section
 - [ ] Add contact form
+- [ ] Incorporate resume
 - [ ] Test responsiveness
 - [ ] Deploy website
 - [ ] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)

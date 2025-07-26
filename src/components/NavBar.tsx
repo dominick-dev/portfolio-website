@@ -34,25 +34,27 @@ function NavBar() {
   return (
     <div className="flex items-center justify-between gap-2 h-25">
       {/* avatar and name/title */}
-      <div className="flex items-center gap-2 group">
-        <div className="relative w-10 h-10 rounded-full overflow-hidden">
-          <Avatar className="w-full h-full">
-            <Image
-              src="/me3.JPEG"
-              alt="Dominick's avatar"
-              width={40}
-              height={40}
-              className="object-cover"
-            />
-          </Avatar>
-          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <span
-            className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 text-2xl animate-wave"
-            role="img"
-            aria-label="waving hand"
-          >
-            👋
-          </span>
+      <Link href="/" className="flex items-center gap-2 group">
+        <div className="flex items-center gap-2 group">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden">
+            <Avatar className="w-full h-full">
+              <Image
+                src="/me3.JPEG"
+                alt="Dominick's avatar"
+                width={40}
+                height={40}
+                className="object-cover"
+              />
+            </Avatar>
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span
+              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 text-2xl animate-wave"
+              role="img"
+              aria-label="waving hand"
+            >
+              👋
+            </span>
+          </div>
         </div>
 
         <div>
@@ -61,7 +63,7 @@ function NavBar() {
             Software Engineer
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* links */}
       <div className="flex items-center gap-1 h-5">
