@@ -43,7 +43,7 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
         ease: [0.25, 0.1, 0.25, 1],
       }}
       className={clsx(
-        "cursor-pointer rounded-xl overflow-hidden shadow-sm transition-shadow",
+        "cursor-pointer rounded-xl overflow-hidden transition-shadow",
         isExpanded && "col-span-2 row-span-1"
       )}
     >
@@ -123,21 +123,27 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
           </div>
 
           {/* github link */}
-          {isExpanded && project.githubLink && (
+          {isExpanded && (
             <motion.div layout className="mt-4 self-start">
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="sm"
-                  className="text-sm hover:ring-1 hover:shadow-md transition-transform hover:scale-[1.03] rounded-xl"
+              {project.githubLink ? (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <GithubIcon className="w-4 h-4" />
-                  GitHub
-                </Button>
-              </a>
+                  <Button
+                    size="sm"
+                    className="text-sm hover:ring-1 hover:shadow-md transition-transform hover:scale-[1.03] rounded-xl"
+                  >
+                    <GithubIcon className="w-4 h-4" />
+                    GitHub
+                  </Button>
+                </a>
+              ) : (
+                <Badge variant="secondary" className="bg-gray-500 text-white">
+                  Private repo - available upon request
+                </Badge>
+              )}
             </motion.div>
           )}
         </div>
