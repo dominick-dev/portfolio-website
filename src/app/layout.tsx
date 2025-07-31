@@ -3,6 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "next-speed-insights";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,10 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        <div className="min-h-screen px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-72 py-15">
-          <div className="mx-auto w-full max-w-3xl">{children}</div>
-        </div>
+        <SpeedInsights />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-72 py-15">
+            <div className="mx-auto w-full max-w-3xl">{children}</div>
+          </div>
         </ThemeProvider>
         <Toaster position="top-center" richColors />
       </body>
