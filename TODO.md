@@ -13,3 +13,5 @@
 - [ ] Get .dev domain name
 - [ ] Setup email forwarding, update email on site
 - [ ] Fix email copied sonner not displaying in center of screen
+- [ ] Add functionality to display portfolio_light when in dark mode and vice versa
+- [ ] Replace PennSearch project image w/ custom made one for better depiction of project architecture
