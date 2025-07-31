@@ -40,7 +40,7 @@ function NavBar() {
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Avatar className="w-full h-full">
               <Image
-                src="/me3.JPEG"
+                src="/me3.jpeg"
                 alt="Dominick's avatar"
                 width={40}
                 height={40}
