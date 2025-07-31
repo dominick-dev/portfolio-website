@@ -146,12 +146,15 @@ function NavBar() {
                 </Button>
               </DropdownMenuItem>
               {/* copy email */}
-              <DropdownMenuItem className="rounded-lg">
+              <DropdownMenuItem
+                className="rounded-lg"
+                onClick={() => saveToClipboard("devindm101@gmail.com")}
+              >
                 <Button
                   variant="ghost"
                   size="sm"
                   className="justify-start text-left text-sm"
-                  onClick={() => saveToClipboard("devindm101@gmail.com")}
+                  // onClick={() => saveToClipboard("devindm101@gmail.com")}
                 >
                   Copy email
                 </Button>
