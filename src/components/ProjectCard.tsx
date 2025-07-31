@@ -50,27 +50,29 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
       <div
         className={clsx(
           "w-full h-full",
-          isExpanded ? "flex flex-row gap-4 p-4" : "flex flex-col"
+          isExpanded ? "flex flex-row gap-4" : "flex flex-col"
         )}
       >
+        {/* image */}
         <div
           className={clsx(
-            isExpanded ? "w-1/2 h-auto" : "w-full h-[150px] md:h-[180px]"
+            isExpanded ? "w-1/2 aspect-[4/3]" : "w-full h-[150px] md:h-[180px]",
+            "relative rounded-md overflow-hidden"
           )}
         >
-          {/* image */}
           <Image
             src={project.img}
             alt={`${project.title} preview`}
-            width={isExpanded ? 400 : 300}
-            height={isExpanded ? 300 : 200}
-            className="w-full h-full object-cover rounded-md"
+            fill
+            className="object-cover"
           />
         </div>
+
+        {/* info block */}
         <div
           className={clsx(
             "flex flex-col",
-            isExpanded ? "w-1/2 justify-between gap-4" : "p-4"
+            isExpanded ? "w-1/2 justify-between" : "p-4"
           )}
         >
           <div>
@@ -141,7 +143,7 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
                 </a>
               ) : (
                 <Badge variant="secondary" className="bg-gray-500 text-white">
-                  Private repo - available upon request
+                  Private repo - available on request
                 </Badge>
               )}
             </motion.div>
