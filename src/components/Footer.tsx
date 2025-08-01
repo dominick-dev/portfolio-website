@@ -25,7 +25,7 @@ function Footer() {
         <div className="flex flex-col items-center md:items-start gap-10">
           <div className="flex gap-4">
             <a
-              href="mailto:devindm101@gmail.com"
+              href="mailto:hello@dominick.dev"
               aria-label="Email"
               className="hover:text-foreground transition"
             >

@@ -138,7 +138,7 @@ function NavBar() {
                   size="sm"
                   className="w-full justify-start text-left flex text-sm"
                   onClick={() => {
-                    window.location.href = "mailto:devindm101@gmail.com";
+                    window.location.href = "mailto:hello@dominick.dev";
                   }}
                 >
                   Send me an email
@@ -148,13 +148,12 @@ function NavBar() {
               {/* copy email */}
               <DropdownMenuItem
                 className="rounded-lg"
-                onClick={() => saveToClipboard("devindm101@gmail.com")}
+                onClick={() => saveToClipboard("hello@dominick.dev")}
               >
                 <Button
                   variant="ghost"
                   size="sm"
                   className="justify-start text-left text-sm"
-                  // onClick={() => saveToClipboard("devindm101@gmail.com")}
                 >
                   Copy email
                 </Button>
@@ -165,7 +164,7 @@ function NavBar() {
                 disabled
                 className="!bg-blue-900 px-3 py-2 text-xs w-full rounded-none pl-5"
               >
-                devindm101@gmail.com
+                hello@dominick.dev
               </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
