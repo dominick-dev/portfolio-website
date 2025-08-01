@@ -19,10 +19,10 @@ import { Button } from "@/components/ui/button";
 
 function Footer() {
   return (
-    <footer className="border-t pt-8 pb-30 text-sm text-muted-foreground">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-y-10 text-center md:text-left">
-        {/* socials (upper-left), copyright (lower-left) */}
-        <div className="flex flex-col items-center md:items-start gap-10">
+    <footer className="border-t pt-8 pb-8 text-sm text-muted-foreground">
+      <div className="max-w-6xl mx-auto px-4 grid gap-y-8 text-center md:grid-cols-3 md:gap-y-0 md:text-left">
+        {/* socials & copyright */}
+        <div className="flex flex-col items-center md:items-start gap-4">
           <div className="flex gap-4">
             <a
               href="mailto:hello@dominick.dev"
@@ -50,14 +50,15 @@ function Footer() {
               <SiGithub className="h-5 w-5" />
             </a>
           </div>
-          <span>© {new Date().getFullYear()} Dominick DeVincenzo</span>
+          <span className="sm:mt-4">
+            © {new Date().getFullYear()} Dominick DeVincenzo
+          </span>
         </div>
 
-        {/* page links (middle) */}
-        <div className="flex justify-center">
+        {/* page links */}
+        <div className="flex flex-wrap justify-center gap-2">
           <Breadcrumb>
             <BreadcrumbList>
-              {/* home link */}
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="#home">Home</Link>
@@ -66,7 +67,6 @@ function Footer() {
               <BreadcrumbSeparator>
                 <SlashIcon className="w-3 h-3" />
               </BreadcrumbSeparator>
-              {/* about link */}
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="#about">About</Link>
@@ -75,7 +75,6 @@ function Footer() {
               <BreadcrumbSeparator>
                 <SlashIcon className="w-3 h-3" />
               </BreadcrumbSeparator>
-              {/* projects link */}
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
                   <Link href="#projects">Projects</Link>
@@ -85,8 +84,8 @@ function Footer() {
           </Breadcrumb>
         </div>
 
-        {/* toggle light/dark mode (upper-right), made w/ message (lower-right) */}
-        <div className="flex flex-col items-end gap-6 text-right">
+        {/* resume, theme toggle, message */}
+        <div className="flex flex-col items-center md:items-end gap-4">
           <div className="flex gap-4">
             <HoverCard openDelay={200}>
               <HoverCardTrigger asChild>
@@ -95,7 +94,6 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition"
-                  aria-label="View Resume"
                 >
                   <Button
                     variant="ghost"

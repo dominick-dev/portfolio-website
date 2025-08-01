@@ -18,7 +18,7 @@ function ProjectsGrid({ projects }: Props) {
           Projects:
         </h3>
       </div>
-      <div className="grid grid-cols-2 gap-6 auto-rows-[200px] md:auto-rows-[300px] [grid-auto-flow:dense]">
+      <div className="grid md:grid-cols-2 gap-6 auto-rows-[minmax(200px,auto)] md:auto-rows-[minmax(300px,auto)] [grid-auto-flow:dense]">
         {projects.map((project) => (
           <ProjectWrapper
             key={project.id}
