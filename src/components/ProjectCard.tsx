@@ -43,20 +43,22 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
         ease: [0.25, 0.1, 0.25, 1],
       }}
       className={clsx(
-        "cursor-pointer rounded-xl overflow-hidden transition-shadow",
-        isExpanded && "col-span-2 row-span-1"
+        "cursor-pointer rounded-xl overflow-hidden transition-shadow h-fit",
+        isExpanded && "md:col-span-2"
       )}
     >
       <div
         className={clsx(
-          "w-full h-full",
+          "w-full h-fit",
           isExpanded ? "flex flex-row gap-4" : "flex flex-col"
         )}
       >
         {/* image */}
         <div
           className={clsx(
-            isExpanded ? "w-1/2 aspect-[4/3]" : "w-full h-[150px] md:h-[180px]",
+            isExpanded
+              ? "hidden md:block w-1/2 aspect-[4/3]"
+              : "w-full h-[150px] md:h-[180px]",
             "relative rounded-md overflow-hidden"
           )}
         >
@@ -71,8 +73,8 @@ function ProjectCard({ project, isExpanded, onClick, innerRef }: Props) {
         {/* info block */}
         <div
           className={clsx(
-            "flex flex-col",
-            isExpanded ? "w-1/2 justify-between" : "p-4"
+            "flex flex-col flex-1",
+            isExpanded ? "w-full md:w-1/2 justify-between" : "p-4"
           )}
         >
           <div>
