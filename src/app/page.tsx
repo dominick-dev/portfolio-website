@@ -38,7 +38,7 @@ const projects: Project[] = [
       "MongoDB",
       "AWS RDS",
     ],
-    githubLink: "https://github.com/hi-jaxon/5500project",
+    githubLink: "https://github.com/dominick-dev/BookBase",
   },
   {
     id: 3,
