@@ -9,19 +9,18 @@ function AboutMe() {
           Medical Center. I&apos;m also gearing up to start my final semester
           before completing my{" "}
           <b>Master&apos;s in Computer and Information Technology</b> at the{" "}
-          <b>University of Pennsylvania</b>.
+          University of Pennsylvania.
         </p>
         <p>
           Through the program, I&apos;ve gained hands-on experience with core
-          <b> computer science</b> topics including{" "}
+          computer science topics including{" "}
           <b>
             software engineering, computer systems, databases, and networked
             applications
           </b>
-          . In my final semester, I’ll be taking{" "}
-          <b>Machine Learning for Data Science</b> and{" "}
-          <b>Internet and Web Systems</b> to dive deeper into AI and building
-          scalable web apps.
+          . In my final semester, I’ll be taking Machine Learning for Data
+          Science and Internet and Web Systems to dive deeper into <b>AI</b> and{" "}
+          <b>building scalable web apps</b>.
         </p>
         <p>
           My background blends <b>data, research, and software</b> - driven by a
