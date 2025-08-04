@@ -102,7 +102,7 @@ const projects: Project[] = [
       "Based on a tutorial by NeetCode, this project implements video upload, transcoding, and playback using Next.js, Firebase, Cloud Storage, Cloud Pub/Sub, and Cloud Run. It features Google Sign-In, signed upload URLs, asynchronous FFmpeg video processing, and metadata management via Firestore. The architecture showcases a scalable, event-driven workflow for real-time video upload and processing.",
     img: "/yt-logo.png",
     technologies: ["Next.js", "Tailwind CSS", "Firebase", "GCP"],
-    githubLink: "https://github.com/dominick-dev/yt-clone",
+    githubLink: "",
   },
 ];
 
