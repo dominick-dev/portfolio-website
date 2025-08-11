@@ -1,3 +1,5 @@
+// "use client"
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,6 +20,17 @@ import {
 import { Button } from "@/components/ui/button";
 
 function Footer() {
+  const onResumeClick = () => {
+    // send GA4 event
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "resume_click", {
+        event_category: "engagement",
+        event_label: "footer_button",
+        transport_type: "beacon",
+      });
+    }
+  };
+
   return (
     <footer className="border-t pt-8 pb-30 text-sm text-muted-foreground">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-y-10 text-center md:text-left">
@@ -96,6 +109,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition"
                   aria-label="View Resume"
+                  onClick={onResumeClick}
                 >
                   <Button
                     variant="ghost"

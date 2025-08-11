@@ -32,146 +32,158 @@ function saveToClipboard(email: string) {
 }
 
 function NavBar() {
-  return (
-    <div className="flex items-center justify-between gap-2 h-25">
-      {/* avatar and name/title */}
-      <Link href="/" className="flex items-center gap-2 group">
-        <div className="flex items-center gap-2 group">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden">
-            <Avatar className="w-full h-full">
-              <Image
-                src="/me3.jpeg"
-                alt="Dominick's avatar"
-                width={40}
-                height={40}
-                className="object-cover"
-              />
-            </Avatar>
-            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <span
-              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 text-2xl animate-wave"
-              role="img"
-              aria-label="waving hand"
-            >
-              👋
+    const onResumeClick = () => {
+      // send GA4 event
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "resume_click", {
+          event_category: "engagement",
+          event_label: "navBar_button",
+          transport_type: "beacon",
+        });
+      }
+    };
+
+    return (
+      <div className="flex items-center justify-between gap-2 h-25">
+        {/* avatar and name/title */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="flex items-center gap-2 group">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden">
+              <Avatar className="w-full h-full">
+                <Image
+                  src="/me3.jpeg"
+                  alt="Dominick's avatar"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
+              </Avatar>
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 text-2xl animate-wave"
+                role="img"
+                aria-label="waving hand"
+              >
+                👋
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <h3>Dominick DeVincenzo</h3>
+            <span className="text-sm text-muted-foreground">
+              Software Engineer
             </span>
           </div>
-        </div>
-
-        <div>
-          <h3>Dominick DeVincenzo</h3>
-          <span className="text-sm text-muted-foreground">
-            Software Engineer
-          </span>
-        </div>
-      </Link>
-
-      {/* links */}
-      <div className="flex items-center gap-1 h-5">
-        {/* navbar links */}
-        <Link href="#about">
-          <Button variant="ghost" size="sm" className="rounded-xl">
-            About
-          </Button>
         </Link>
 
-        <Link href="#projects">
-          <Button variant="ghost" size="sm" className="rounded-xl">
-            Projects
-          </Button>
-        </Link>
+        {/* links */}
+        <div className="flex items-center gap-1 h-5">
+          {/* navbar links */}
+          <Link href="#about">
+            <Button variant="ghost" size="sm" className="rounded-xl">
+              About
+            </Button>
+          </Link>
 
-        <Separator className="h-6" orientation="vertical" />
+          <Link href="#projects">
+            <Button variant="ghost" size="sm" className="rounded-xl">
+              Projects
+            </Button>
+          </Link>
 
-        {/* resume hover card */}
-        <HoverCard openDelay={200}>
-          <HoverCardTrigger asChild>
-            <a
-              href="/Resume_2025.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition"
-              aria-label="View Resume"
-            >
+          <Separator className="h-6" orientation="vertical" />
+
+          {/* resume hover card */}
+          <HoverCard openDelay={200}>
+            <HoverCardTrigger asChild>
+              <a
+                href="/Resume_2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition"
+                aria-label="View Resume"
+                onClick={onResumeClick}
+              >
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="size-8 relative group rounded-lg"
+                >
+                  <FileUser />
+                  <span className="sr-only">View Resume</span>
+                </Button>
+              </a>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-auto px-3 py-1 text-sm">
+              <p className="text-center">View my resume</p>
+            </HoverCardContent>
+          </HoverCard>
+
+          {/* email hover card */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
                 className="size-8 relative group rounded-lg"
               >
-                <FileUser />
-                <span className="sr-only">View Resume</span>
+                <HoverCard openDelay={200}>
+                  <HoverCardTrigger asChild>
+                    <span className="absolute inset-0" />
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-auto px-3 py-1 text-sm">
+                    <p className="text-center">Message me</p>
+                  </HoverCardContent>
+                </HoverCard>
+                <Mailbox />
               </Button>
-            </a>
-          </HoverCardTrigger>
-          <HoverCardContent className="w-auto px-3 py-1 text-sm">
-            <p className="text-center">View my resume</p>
-          </HoverCardContent>
-        </HoverCard>
+            </DropdownMenuTrigger>
 
-        {/* email hover card */}
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 relative group rounded-lg"
-            >
-              <HoverCard openDelay={200}>
-                <HoverCardTrigger asChild>
-                  <span className="absolute inset-0" />
-                </HoverCardTrigger>
-                <HoverCardContent className="w-auto px-3 py-1 text-sm">
-                  <p className="text-center">Message me</p>
-                </HoverCardContent>
-              </HoverCard>
-              <Mailbox />
-            </Button>
-          </DropdownMenuTrigger>
-
-          {/* dropdown menu for email options */}
-          <DropdownMenuContent align="end" className="w-55 p-0">
-            <DropdownMenuGroup>
-              {/* send email */}
-              <DropdownMenuItem className="rounded-lg">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-start text-left flex text-sm"
-                  onClick={() => {
-                    window.location.href = "mailto:hello@dominick.dev";
-                  }}
+            {/* dropdown menu for email options */}
+            <DropdownMenuContent align="end" className="w-55 p-0">
+              <DropdownMenuGroup>
+                {/* send email */}
+                <DropdownMenuItem className="rounded-lg">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-start text-left flex text-sm"
+                    onClick={() => {
+                      window.location.href = "mailto:hello@dominick.dev";
+                    }}
+                  >
+                    Send me an email
+                    <Send className="ml-auto h-3 w-3 stroke-[1.5]" />
+                  </Button>
+                </DropdownMenuItem>
+                {/* copy email */}
+                <DropdownMenuItem
+                  className="rounded-lg"
+                  onClick={() => saveToClipboard("hello@dominick.dev")}
                 >
-                  Send me an email
-                  <Send className="ml-auto h-3 w-3 stroke-[1.5]" />
-                </Button>
-              </DropdownMenuItem>
-              {/* copy email */}
-              <DropdownMenuItem
-                className="rounded-lg"
-                onClick={() => saveToClipboard("hello@dominick.dev")}
-              >
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="justify-start text-left text-sm"
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="justify-start text-left text-sm"
+                  >
+                    Copy email
+                  </Button>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="p-0 h-0" />
+                {/* hardcoded email */}
+                <DropdownMenuItem
+                  disabled
+                  className="!bg-blue-900 px-3 py-2 text-xs w-full rounded-none pl-5"
                 >
-                  Copy email
-                </Button>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator className="p-0 h-0" />
-              {/* hardcoded email */}
-              <DropdownMenuItem
-                disabled
-                className="!bg-blue-900 px-3 py-2 text-xs w-full rounded-none pl-5"
-              >
-                hello@dominick.dev
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-          </DropdownMenuContent>
-        </DropdownMenu>
+                  hello@dominick.dev
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
-    </div>
-  );
+    );
 }
 
 export default NavBar;
