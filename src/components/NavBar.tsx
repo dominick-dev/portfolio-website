@@ -42,13 +42,13 @@ function saveToClipboard(email: string) {
 function NavBar() {
   // track resume clicks w/ GA4
   const handleResumeClick = () => {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "resume_click", {
-        event_category: "engagement",
-        event_label: "nav_button",
-        transport_type: "beacon",
-      });
-    }
+     if (typeof window !== "undefined" && typeof window.gtag === "function") {
+       window.gtag("event", "resume_click", {
+         event_category: "engagement",
+         event_label: "footer_button",
+         transport_type: "beacon",
+       } as Record<string, unknown>);
+     }
   };
 
   return (
