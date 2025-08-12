@@ -22,12 +22,12 @@ import { Button } from "@/components/ui/button";
 function Footer() {
   // track resume clicks w/ GA4
   const handleResumeClick = () => {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "resume_click", {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "resume_click", {
         event_category: "engagement",
         event_label: "footer_button",
         transport_type: "beacon",
-      });
+      } as Record<string, unknown>);
     }
   };
 
