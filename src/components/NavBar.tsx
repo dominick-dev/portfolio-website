@@ -40,6 +40,17 @@ function saveToClipboard(email: string) {
 }
 
 function NavBar() {
+  // track resume clicks w/ GA4
+  const handleResumeClick = () => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "resume_click", {
+        event_category: "engagement",
+        event_label: "nav_button",
+        transport_type: "beacon",
+      });
+    }
+  };
+
   return (
     <div className="flex items-center justify-between gap-2 py-6">
       {/* avatar and name/title */}
@@ -97,6 +108,7 @@ function NavBar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Resume"
+                onClick={handleResumeClick}
               >
                 <Button
                   variant="ghost"
