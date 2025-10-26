@@ -4,9 +4,8 @@ function AboutMe() {
       {/* Bio Section */}
       <div className="space-y-4">
         <p>
-          I&apos;m an aspiring <b>software engineer</b> currently working as a
-          Data Coordinator on oncology clinical trials at Georgetown University
-          Medical Center. Also, I&apos;m in my final semester pursuing a{" "}
+          I&apos;m a <b>software engineer</b> currently  working at DRS Rada Tehcnologies. 
+          Also, I&apos;m in my final semester pursuing a{" "}
           <b>Master&apos;s in Computer and Information Technology</b> at the{" "}
           University of Pennsylvania.
         </p>
@@ -22,7 +21,7 @@ function AboutMe() {
           <b>building scalable web apps</b>.
         </p>
         <p>
-          My background blends <b>data, research, and software</b> - driven by a
+          My background blends <b>software, data, and research</b> - driven by a
           strong interest in building tools that solve real-world problems. When
           I&apos;m not coding or studying, you&apos;ll find me tinkering with my
           espresso machine, spending time with my family, or petting every dog I
