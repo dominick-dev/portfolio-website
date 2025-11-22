@@ -1,15 +1,15 @@
-Check out https://dominick.dev 🔎
+Check it out @ https://dominick.dev 🔎
 
 Credit to these sites for the inspiration ->
 <br/>
 {
 <br/>
-aesthetic http://arisacoba.com,
+aesthetic 🦋 http://arisacoba.com,
 <br/>
-minimal https://namitjuneja.com,
+minimal 📜 https://namitjuneja.com,
 <br/>
-compact https://brianmaierjr.com,
+compact 🤏 https://brianmaierjr.com,
 <br/>
-clean https://www.cassandratang.com,
+clean 🧼 https://www.cassandratang.com,
 <br/>
 }
