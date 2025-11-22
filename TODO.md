@@ -9,7 +9,7 @@
 - [x] Test responsiveness
 - [x] Deploy website
 - [ ] Write README
-- [ ] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)
+- [x] Give credits to inspo sites (https://www.arisacoba.com/, https://namitjuneja.com/, https://brianmaierjr.com/, https://www.cassandratang.com/)
 - [x] Get .dev domain name
 - [x] Setup email forwarding, update email on site
 - [ ] Fix email copied sonner not displaying in center of screen
