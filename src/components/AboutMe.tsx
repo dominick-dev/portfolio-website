@@ -5,25 +5,19 @@ function AboutMe() {
       <div className="space-y-4">
         <p>
           I&apos;m a <b>software engineer</b> currently working at DRS Rada
-          Technologies. Also, I&apos;m in my final semester pursuing a{" "}
-          <b>Master&apos;s in Computer and Information Technology</b> at the{" "}
-          University of Pennsylvania.
+          Technologies. Also, I recently graduated from the University of Pennsylvania
+          with a <b>Master&apos;s in Computer and Information Technology</b>.
         </p>
         <p>
-          Through the program, I&apos;ve gained hands-on experience with core
-          computer science topics including{" "}
-          <b>
-            software engineering, computer systems, databases, and networked
-            applications
-          </b>
-          . To close out the program, I&apos;m taking Machine Learning for Data
-          Science and Internet and Web Systems to dive deeper into <b>AI</b> and{" "}
-          <b>building scalable web apps</b>.
+          I&apos;m now enjoying the free time I now have after graduation
+          by working on building some software projects I've had on the 
+          backburner. Currently working on a chat application in C to explore
+          networking further.
         </p>
         <p>
           My background blends <b>software, data, and research</b> - driven by a
           strong interest in building tools that solve real-world problems. When
-          I&apos;m not coding or studying, you&apos;ll find me tinkering with my
+          I&apos;m not coding, you&apos;ll find me tinkering with my
           espresso machine, spending time with my family, or petting every dog I
           meet.
         </p>
@@ -35,13 +29,9 @@ function AboutMe() {
           Right now, I’m focused on:
         </h3>
         <ul className="list-disc pl-5 space-y-1">
-          <li>
-            Building a RAG chatbot to match patients with clinical research
-            trials ⚕️
-          </li>
-          <li>Designing this portfolio website to showcase my projects 💼</li>
-          <li>Revisiting Italian after a recent trip to Italy 🇮🇹</li>
-          <li>Leetcoding to sharpen my DS&A skills 💻</li>
+          <li>Building a terminal based chat application in C</li>
+          <li>Learning Vim commands to assert dominance</li>
+          <li>Leetcoding to sharpen my DS&A skills</li>
         </ul>
       </div>
     </div>
