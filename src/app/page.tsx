@@ -6,8 +6,24 @@ import { Separator } from "@/components/ui/separator";
 import type { Project } from "@/components/ProjectCard";
 
 const projects: Project[] = [
-  {
+ {
     id: 1,
+    title: "Cloud Based distributed Search Engine",
+    summary: "A full stack distributed search engine built with Java",
+    details:
+      "A cloud-based distributed search engine built end-to-end in Java and deployed on AWS EC2. The system integrates a multi-threaded web crawler, a distributed key-value store, and a Flame-based batch processing pipeline to index over one million web pages. Search results are ranked using a combination of TF/IDF scoring and PageRank, with parallelized lookups to support low-latency interactive queries.",
+    img: "/page_pilot.png",
+    technologies: [
+      "Java",
+      "HTML/CSS",
+      "JS",
+      "AWS EC2",
+      "Bash",
+    ],
+    githubLink: "",
+  },
+  {
+    id: 2,
     title: "RAG Chatbot",
     summary: "A clinical research focused AI chatbot",
     details:
@@ -24,7 +40,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/dominick-dev/CRC-ChatBot",
   },
   {
-    id: 2,
+    id: 3,
     title: "BookBase",
     summary: "A data-driven web app for book discovery",
     details:
@@ -41,7 +57,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/dominick-dev/BookBase",
   },
   {
-    id: 3,
+    id: 4,
     title: "Chord DHT + Search Engine",
     summary: "A distributed search engine using a Chord-based DHT",
     details:
@@ -51,7 +67,7 @@ const projects: Project[] = [
     githubLink: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Real-Time Messenger",
     summary:
       "A real-time chat application with real-time messaging, authentication, and media sharing",
@@ -70,7 +86,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/dominick-dev/real-time-messenger",
   },
   {
-    id: 5,
+    id: 6,
     title: "Portfolio Website",
     summary: "You’re looking at it! Showcasing skills and projects",
     details:
@@ -80,7 +96,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/dominick-dev/portfolio-website",
   },
   {
-    id: 6,
+    id: 7,
     title: "OpenData Philly Analysis",
     summary: "A terminal-based, Philadelphia focused data analysis tool ",
     details:
@@ -95,7 +111,7 @@ const projects: Project[] = [
     githubLink: "",
   },
   {
-    id: 7,
+    id: 8,
     title: "YouTube Clone",
     summary: "A simplified YouTube clone built with full-stack architecture",
     details:

@@ -4,7 +4,7 @@ function AboutMe() {
       {/* Bio Section */}
       <div className="space-y-4">
         <p>
-          I&apos;m a <b>software engineer</b> currently working at DRS Rada
+          I&apos;m a <b>software engineer</b> currently working at Leonardo DRS Rada
           Technologies. Also, I recently graduated from the University of Pennsylvania
           with a <b>Master&apos;s in Computer and Information Technology</b>.
         </p>
@@ -12,12 +12,12 @@ function AboutMe() {
           I&apos;m now enjoying the free time I now have after graduation
           by working on building some software projects I've had on the 
           backburner. Currently working on a chat application in C to explore
-          networking further.
+          networking.
         </p>
         <p>
           My background blends <b>software, data, and research</b> - driven by a
           strong interest in building tools that solve real-world problems. When
-          I&apos;m not coding, you&apos;ll find me tinkering with my
+          I&apos;m not programming, you&apos;ll find me tinkering with my
           espresso machine, spending time with my family, or petting every dog I
           meet.
         </p>
@@ -30,7 +30,7 @@ function AboutMe() {
         </h3>
         <ul className="list-disc pl-5 space-y-1">
           <li>Building a terminal based chat application in C</li>
-          <li>Learning Vim commands to assert dominance</li>
+          <li>Learning Vim because speed</li>
           <li>Leetcoding to sharpen my DS&A skills</li>
         </ul>
       </div>
