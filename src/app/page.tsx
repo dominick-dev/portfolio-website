@@ -8,7 +8,7 @@ import type { Project } from "@/components/ProjectCard";
 const projects: Project[] = [
  {
     id: 1,
-    title: "Cloud Based distributed Search Engine",
+    title: "Cloud Based Distributed Search Engine",
     summary: "A full stack distributed search engine built with Java",
     details:
       "A cloud-based distributed search engine built end-to-end in Java and deployed on AWS EC2. The system integrates a multi-threaded web crawler, a distributed key-value store, and a Flame-based batch processing pipeline to index over one million web pages. Search results are ranked using a combination of TF/IDF scoring and PageRank, with parallelized lookups to support low-latency interactive queries.",
