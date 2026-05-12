@@ -29,7 +29,8 @@ function AboutMe() {
           Right now, I’m focused on:
         </h3>
         <ul className="list-disc pl-5 space-y-1">
-          <li>Building a terminal based chat application in C</li>
+          <li>Finishing up a terminal based chat application in C</li>
+          <li>Learning rust for my next project</li>
           <li>Learning Vim because speed</li>
           <li>Leetcoding to sharpen my DS&A skills</li>
         </ul>

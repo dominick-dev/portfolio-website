@@ -280,7 +280,7 @@ function NavBar() {
 
                 <SheetClose asChild>
                   <a
-                    href="/Resume_2026.pdf"
+                    href="/Resume_2026_DDeVincenzo.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

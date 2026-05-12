@@ -103,7 +103,7 @@ function Footer() {
             <HoverCard openDelay={200}>
               <HoverCardTrigger asChild>
                 <a
-                  href="/Resume_2026.pdf"
+                  href="/Resume_2026_DDeVincenzo.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition"
