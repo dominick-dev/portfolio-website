@@ -104,7 +104,7 @@ function NavBar() {
           <HoverCard openDelay={200}>
             <HoverCardTrigger asChild>
               <a
-                href="/Resume_2026_DDevincenzo.pdf"
+                href="/Resume_2026_DDeVincenzo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Resume"
