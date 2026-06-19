@@ -4,7 +4,7 @@ function AboutMe() {
       {/* Bio Section */}
       <div className="space-y-4">
         <p>
-          I&apos;m a <b>software engineer</b> currently working at Leonardo DRS Rada
+          I&apos;m a <b>software engineer</b> currently working at Leonardo DRS RADA
           Technologies. Also, I recently graduated from the University of Pennsylvania
           with a <b>Master&apos;s in Computer and Information Technology</b>.
         </p>
